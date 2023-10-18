@@ -67,12 +67,12 @@ namespace CodeCosmos {
        return is_block_present(PLANKS_OAK);
     }
 
-    //% block="is hout"
+    //% block="is baksteen"
     export function is_brick(): boolean {
         return is_block_present(BRICKS)
     }
 
-    //% block="is hout"
+    //% block="is keisteen"
     export function is_cobblestone(): boolean {
         return is_block_present(COBBLESTONE);
     }
