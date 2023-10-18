@@ -12,23 +12,23 @@ enum lever_state{
 //% color=190 weight=100 block="CodeCosmos"
 namespace CodeCosmos {
     
-    let currentLever = 0;
+    let currentLeverId = 0;
     //% block="Zet klaar"
     export function setup_intro(){
-        currentLever = 0;
+        currentLeverId = 0;
     }
 
     //% block="volgende schakelaar"
     export function next_lever(){
-        if(currentLever < 11){
-            currentLever++;
+        if (currentLeverId < 11){
+            currentLeverId++;
         }
     }
 
     //% block="stel schakelaar in op %state"
     //% state.defl=lever_state.OFF
     export function set_current_lever(state: lever_state){
-        set_lever(currentLever, state == lever_state.ON);
+        set_lever(currentLeverId, state == lever_state.ON);
     }
 
     //% block="Set lever %lever value %state"
@@ -49,4 +49,32 @@ namespace CodeCosmos {
             agent.interact(FORWARD);
         }
     }
+
+    function is_block_present(block: Block): boolean{
+        let leverRoot: Position = world(28, 70, 268);
+        let currentLever: Position = leverRoot.add(world(currentLeverId, 0, 0)).add(world(0, 0, -1));
+
+        for (let i = 0; i < 4; i++) {
+            if (blocks.testForBlock(block, currentLever.add(world(0, i, 0)))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //% block="is hout"
+    export function is_wood(): boolean{
+       return is_block_present(PLANKS_OAK);
+    }
+
+    //% block="is hout"
+    export function is_brick(): boolean {
+        return is_block_present(BRICKS)
+    }
+
+    //% block="is hout"
+    export function is_cobblestone(): boolean {
+        return is_block_present(COBBLESTONE);
+    }
+
 }
