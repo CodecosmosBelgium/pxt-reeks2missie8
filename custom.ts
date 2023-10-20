@@ -17,7 +17,13 @@ namespace CodeCosmos {
     export function setup_intro(){
         currentLeverId = 0;
         //clone 28 68 273  38 68 273  28 70 268
-        blocks.clone(world(28, 68, 273), world(38, 68, 273), world(28, 70, 268), CloneMask.Replace, CloneMode.Force)
+        blocks.clone(
+            world(28, 68, 273),
+            world(38, 68, 273),
+            world(28, 70, 268),
+            CloneMask.Replace,
+            CloneMode.Force
+        )
     }
 
     //% block="volgende schakelaar"
