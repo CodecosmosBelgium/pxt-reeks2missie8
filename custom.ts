@@ -90,6 +90,7 @@ namespace CodeCosmos {
         ///fill 55 70 216 74 70 216 wheat["growth"=7]
         player.execute(`/fill 55 70 216 74 70 216 wheat["growth"=7]`)
         
+        agent.teleport(agent.getPosition(), EAST)
     }
 
     //% block="is blok %block=block onder agent"
