@@ -17,7 +17,7 @@ player.onChat("run", function () {
 ```
 
 ```template
-player.onChat("intro", function () {
+player.onChat("level1", function () {
 CodeCosmos.setup_intro()
 for (let index = 0; index < 11; index++) {
       
