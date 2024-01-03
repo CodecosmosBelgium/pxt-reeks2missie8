@@ -1,6 +1,6 @@
 ### @hideIteration true
 ### @flyoutOnly true
-# Mission Intro
+# level 1
 ```blocks
 player.onChat("run", function () {
     CodeCosmos.setup_intro()
@@ -18,7 +18,7 @@ player.onChat("run", function () {
 
 ```template
 player.onChat("level1", function () {
-CodeCosmos.setup_intro()
+CodeCosmos.setup_level1()
 for (let index = 0; index < 11; index++) {
       
 }
