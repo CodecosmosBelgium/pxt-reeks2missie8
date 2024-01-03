@@ -19,6 +19,6 @@ while(true){
 })
 ```
 
-## Hacking the door
+## Level 1
 
 Use the learning platform to solve the exercise.
