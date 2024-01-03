@@ -85,4 +85,11 @@ namespace CodeCosmos {
         return is_block_present(COBBLESTONE);
     }
 
+    //% block="zet klaar"
+    export function setup_level1(){
+        ///fill 55 70 216 74 70 216 wheat["growth"=7]
+        player.execute(`/fill 55 70 216 74 70 216 wheat["growth"=7]`)
+        
+    }
+
 }
