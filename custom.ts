@@ -87,8 +87,8 @@ namespace CodeCosmos {
 
     //% block="zet klaar"
     export function setup_level1(){
-        ///fill 55 70 216 74 70 216 wheat["growth"=7]
-        player.execute(`/fill 55 70 216 74 70 216 wheat["growth"=7]`)
+        //fill 55 70 216 74 70 216 wheat["growth"=7]
+        blocks.place(REDSTONE_BLOCK, world(56,68,211))
         
         agent.teleport(agent.getPosition(), EAST)
     }
