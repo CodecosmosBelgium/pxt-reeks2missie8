@@ -121,9 +121,16 @@ namespace CodeCosmos {
         return blocks.testForBlock(block, agent.getPosition().add(pos(0, -1, 0).add(getAgentVectors()[RelativeDirection.Right])));
     }
 
+    //% block="is blok %block=block voor van de agent"
+    //% block.shadow=minecraftBlock
+    function test_for_block_in_front_of_agent(block: number): boolean {
+        return blocks.testForBlock(block, agent.getPosition().add(pos(0, -1, 0).add(getAgentVectors()[RelativeDirection.Forwards])));
+    }
+
     function invertPos(position: Position) : Position{
         return pos(-position.getValue(Axis.X), -position.getValue(Axis.Y), -position.getValue(Axis.Z))
     }
+   
 
     function getAgentVectors() : Position[]{
         let forwardVector = pos(0,0,0)
