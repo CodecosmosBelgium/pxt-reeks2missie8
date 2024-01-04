@@ -3,7 +3,7 @@
 # level 2
 ```blocks
 player.onChat("level1", function () {
-    CodeCosmos.setup_level1()
+    CodeCosmos.setup_level2()
     while (CodeCosmos.test_for_block_under_agent(FARMLAND)) {
         agent.move(FORWARD, 1)
         agent.destroy(FORWARD)
@@ -19,7 +19,7 @@ player.onChat("level1", function () {
 
 ```template
 player.onChat("level1", function () {
-    CodeCosmos.setup_level1()
+    CodeCosmos.setup_level2()
     while (CodeCosmos.test_for_block_under_agent(FARMLAND)) {
         agent.move(FORWARD, 1)
         agent.destroy(FORWARD)
