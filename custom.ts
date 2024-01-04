@@ -93,6 +93,8 @@ namespace CodeCosmos {
         return is_block_present(COBBLESTONE);
     }
 
+    
+
     //% block="zet klaar"
     export function setup_level1(){
         //fill 55 70 216 74 70 216 wheat["growth"=7]
@@ -121,23 +123,27 @@ namespace CodeCosmos {
         return blocks.testForBlock(block, agent.getPosition().add(pos(0, -1, 0).add(getAgentVectors()[RelativeDirection.Right])));
     }
 
+    
+
     //% block="is blok %block=block voor van de agent"
     //% block.shadow=minecraftBlock
-    function test_for_block_in_front_of_agent(block: number): boolean {
+    export function test_for_block_in_front_of_agent(block: number): boolean {
         return blocks.testForBlock(block, agent.getPosition().add(pos(0, -1, 0).add(getAgentVectors()[RelativeDirection.Forwards])));
     }
 
     //% block="breek plant"
-    function break_plant(): void {
+    export function break_plant(): void {
         agent.destroy(FourDirection.Forward)
+    }
+
+    //% block="is ballz"
+    export function is_ballz(): boolean {
+        return is_block_present(COBBLESTONE);
     }
 
     function invertPos(position: Position) : Position{
         return pos(-position.getValue(Axis.X), -position.getValue(Axis.Y), -position.getValue(Axis.Z))
     }
-
-
-   
 
     function getAgentVectors() : Position[]{
         let forwardVector = pos(0,0,0)
