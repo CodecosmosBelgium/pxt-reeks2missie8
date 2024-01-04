@@ -3,6 +3,12 @@ player.onChat("level1", function () {
     while (CodeCosmos.test_for_block_under_agent(FARMLAND)) {
         agent.move(FORWARD, 1)
         agent.destroy(FORWARD)
+        if (CodeCosmos.test_for_block_left_of_agent(WATER)) {
+            agent.turn(RIGHT_TURN)
+        }
+        if (CodeCosmos.test_for_block_right_of_agent(GRASS)) {
+            agent.turn(LEFT_TURN)
+        }
     }
 })
 player.onChat("intro", function () {

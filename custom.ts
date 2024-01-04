@@ -100,7 +100,14 @@ namespace CodeCosmos {
         //fill 55 70 216 74 70 216 wheat["growth"=7]
         blocks.place(REDSTONE_BLOCK, world(56,68,211))
         
-        agent.teleport(agent.getPosition(), EAST)
+        agent.teleport(world(54, 70, 216), EAST)
+    }
+
+    //% block="zet klaar"
+    export function setup_level2() {
+        //fill 55 70 216 74 70 216 wheat["growth"=7]
+        blocks.place(REDSTONE_BLOCK, world(44, 68, 216))
+        agent.teleport(world(46, 70, 220), WEST)
     }
 
     //% block="is blok %block=block onder agent"
