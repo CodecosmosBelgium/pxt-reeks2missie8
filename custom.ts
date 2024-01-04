@@ -136,11 +136,6 @@ namespace CodeCosmos {
         agent.destroy(FourDirection.Forward)
     }
 
-    //% block="is ballz"
-    export function is_ballz(): boolean {
-        return is_block_present(COBBLESTONE);
-    }
-
     function invertPos(position: Position) : Position{
         return pos(-position.getValue(Axis.X), -position.getValue(Axis.Y), -position.getValue(Axis.Z))
     }
