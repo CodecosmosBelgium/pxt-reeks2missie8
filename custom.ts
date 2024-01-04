@@ -127,9 +127,16 @@ namespace CodeCosmos {
         return blocks.testForBlock(block, agent.getPosition().add(pos(0, -1, 0).add(getAgentVectors()[RelativeDirection.Forwards])));
     }
 
+    //% block="breek plant"
+    function break_plant(): void {
+        agent.destroy(FourDirection.Forward)
+    }
+
     function invertPos(position: Position) : Position{
         return pos(-position.getValue(Axis.X), -position.getValue(Axis.Y), -position.getValue(Axis.Z))
     }
+
+
    
 
     function getAgentVectors() : Position[]{
