@@ -9,6 +9,14 @@ enum lever_state{
     OFF
 }
 
+
+enum RelativeDirection{
+    Forwards = 0,
+    Backwards = 1,
+    Left = 2,
+    Right = 3
+}
+
 //% color=190 weight=100 block="CodeCosmos"
 namespace CodeCosmos {
     
@@ -99,5 +107,50 @@ namespace CodeCosmos {
         return blocks.testForBlock(block, agent.getPosition().add(world(0, -1, 0)))
     }
     
+
+    //% block="is blok %block=block links van de agent"
+    //% block.shadow=minecraftBlock
+    export function test_for_block_left_of_agent(block: number): boolean {
+        return blocks.testForBlock(block, agent.getPosition().add(pos(0,-1,0).add(getAgentVectors()[RelativeDirection.Left])));
+    }
+
+
+    //% block="is blok %block=block rechts van de agent"
+    //% block.shadow=minecraftBlock
+    export function test_for_block_right_of_agent(block: number): boolean {
+        return blocks.testForBlock(block, agent.getPosition().add(pos(0, -1, 0).add(getAgentVectors()[RelativeDirection.Right])));
+    }
+
+    function invertPos(position: Position) : Position{
+        return pos(-position.getValue(Axis.X), -position.getValue(Axis.Y), -position.getValue(Axis.Z))
+    }
+
+    function getAgentVectors() : Position[]{
+        let forwardVector = pos(0,0,0)
+        let leftVector = pos(0,0,0)
+        switch (agent.getOrientation()) {
+            case 0:
+                //South
+                forwardVector = pos(0, 0, 1)
+                leftVector = pos(1, 0, 0)
+                break;
+            case 90:
+                //West
+                forwardVector = pos(-1, 0 ,0)
+                leftVector = pos(0,0,1)
+                break;
+            case -180:
+                //North
+                forwardVector = pos(0, 0, -1)
+                leftVector = pos(-1, 0, 0)
+                break;
+            case -90:
+                //East
+                forwardVector = pos(1,0,0)
+                leftVector = pos(0, 0, -1)
+                break;
+        }
+        return [forwardVector, invertPos(forwardVector), leftVector, invertPos(leftVector)];
+    }
 
 }
