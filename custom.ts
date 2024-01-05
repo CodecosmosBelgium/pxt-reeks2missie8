@@ -113,7 +113,7 @@ namespace CodeCosmos {
     //% block="is blok %block=block onder agent"
     //% block.shadow=minecraftBlock
     export function test_for_block_under_agent(block: number): boolean {
-        return blocks.testForBlock(block, agent.getPosition().add(world(0, -1, 0)))
+        return blocks.testForBlock(block, agent.getPosition().add(world(0, -1, 0))) || blocks.testForBlock(block, agent.getPosition().add(world(0, -3, 0)))
     }
     
 
