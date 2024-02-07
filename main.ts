@@ -7,8 +7,8 @@ player.onChat("level2", function () {
             agent.turn(RIGHT_TURN)
         }
         CodeCosmos.test_for_block_in_front_of_agent(WATER)
-        CodeCosmos.test_for_block_right_of_agent(WATER)
-        CodeCosmos.test_for_block_left_of_agent(WATER)
+CodeCosmos.test_for_block_right_of_agent(WATER)
+CodeCosmos.test_for_block_left_of_agent(WATER)
     }
 })
 player.onChat("intro", function () {
