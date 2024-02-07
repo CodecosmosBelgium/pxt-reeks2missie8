@@ -114,6 +114,13 @@ namespace CodeCosmos {
         agent.teleport(world(46, 70, 220), WEST)
     }
 
+    //% block="zet klaar"
+    export function setup_level3() {
+        //fill 55 70 216 74 70 216 wheat["growth"=7]
+        blocks.place(REDSTONE_BLOCK, world(54, 68, 242))
+        agent.teleport(world(56, 70, 235), EAST)
+    }
+
     //% block="is blok %block=block onder agent"
     //% block.shadow=minecraftBlock
     export function test_for_block_under_agent(block: number): boolean {
