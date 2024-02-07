@@ -19,6 +19,10 @@ enum RelativeDirection{
 
 //% color=190 weight=100 block="CodeCosmos"
 namespace CodeCosmos {
+
+    //Fix for getting agent position
+    player.execute("/scriptevent cc:getId " + mobs.queryTarget((mobs.target(MY_AGENT)))[0].uniqueId)
+
     
     let currentLeverId = 0;
     //% block="Zet klaar"
