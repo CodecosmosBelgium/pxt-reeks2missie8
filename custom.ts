@@ -41,6 +41,8 @@ namespace CodeCosmos {
     export function next_lever(){
         if (currentLeverId < 11){
             currentLeverId++;
+            
+            player.say(currentLeverId)
         }
     }
 
