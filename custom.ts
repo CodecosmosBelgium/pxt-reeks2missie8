@@ -35,6 +35,14 @@ namespace CodeCosmos {
             CloneMask.Replace,
             CloneMode.Force
         )
+        //player.execute("/clone 28 68 273 38 66 272 28 68 267")
+        blocks.clone(
+            world(28, 68, 273),
+            world(38, 66, 272 ),
+            world(28, 68, 267),
+            CloneMask.Replace,
+            CloneMode.Force
+        )
     }
 
     //% block="volgende schakelaar"
@@ -106,6 +114,8 @@ namespace CodeCosmos {
         blocks.place(REDSTONE_BLOCK, world(56,68,211))
         agent.teleport(world(54, 70, 216), EAST)
         agent.move(FourDirection.Forward, 1);
+
+        
     }
 
     //% block="zet klaar"
