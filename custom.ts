@@ -35,11 +35,11 @@ namespace CodeCosmos {
             CloneMask.Replace,
             CloneMode.Force
         )
-        //player.execute("/clone 28 68 273 38 66 272 28 68 267")
+        //clone 28 65 272 38 68 273 28 67 267
         blocks.clone(
-            world(28, 68, 273),
+            world(28, 65, 273),
             world(38, 66, 272 ),
-            world(28, 68, 267),
+            world(28, 67, 267),
             CloneMask.Replace,
             CloneMode.Force
         )
