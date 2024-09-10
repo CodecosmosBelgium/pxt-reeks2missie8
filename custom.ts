@@ -24,7 +24,7 @@ namespace CodeCosmos {
 
     
     let currentLeverId = 0;
-    //% block="Zet klaar"
+    //% block="Setup"
     export function setup_intro(){
         currentLeverId = 0;
         //clone 28 68 273  38 68 273  28 70 268
@@ -45,22 +45,22 @@ namespace CodeCosmos {
         )
     }
 
-    //% block="volgende schakelaar"
+    //% block="next lever"
     export function next_lever(){
         if (currentLeverId < 11){
             currentLeverId++;
             
-            player.say(currentLeverId)
+            //player.say(currentLeverId)
         }
     }
 
-    //% block="stel schakelaar in op %state"
+    //% block="set lever to %state"
     //% state.defl=lever_state.OFF
     export function set_current_lever(state: lever_state){
         set_lever(currentLeverId, state == lever_state.ON);
     }
 
-    //% block="Set lever %lever value %state"
+    //% block="Set lever $state"
     //% lever.min=0 lever.max=10 lever.defl=0
     export function set_lever(lever: number, state: boolean): void {
         let leverRoot: Position = world(28, 70, 268);
@@ -91,24 +91,24 @@ namespace CodeCosmos {
         return false;
     }
 
-    //% block="is hout"
+    //% block="is wood"
     export function is_wood(): boolean{
        return is_block_present(PLANKS_OAK);
     }
 
-    //% block="is baksteen"
+    //% block="is brick"
     export function is_brick(): boolean {
         return is_block_present(BRICKS)
     }
 
-    //% block="is keisteen"
+    //% block="is cobblestone"
     export function is_cobblestone(): boolean {
         return is_block_present(COBBLESTONE);
     }
 
     
 
-    //% block="zet klaar"
+    //% block="setup"
     export function setup_level1(){
         //fill 55 70 216 74 70 216 wheat["growth"=7]
         blocks.place(REDSTONE_BLOCK, world(56,68,211))
@@ -118,35 +118,35 @@ namespace CodeCosmos {
         
     }
 
-    //% block="zet klaar"
+    //% block="setup"
     export function setup_level2() {
         //fill 55 70 216 74 70 216 wheat["growth"=7]
         blocks.place(REDSTONE_BLOCK, world(44, 68, 216))
         agent.teleport(world(46, 70, 220), WEST)
     }
 
-    //% block="zet klaar"
+    //% block="setup"
     export function setup_level3() {
         //fill 55 70 216 74 70 216 wheat["growth"=7]
         blocks.place(REDSTONE_BLOCK, world(54, 68, 242))
         agent.teleport(world(56, 70, 235), EAST)
     }
 
-    //% block="is blok %block=block onder agent"
+    //% block="is block %block=block under the agent"
     //% block.shadow=minecraftBlock
     export function test_for_block_under_agent(block: number): boolean {
         return blocks.testForBlock(block, agent.getPosition().add(world(0, -1, 0))) || blocks.testForBlock(block, agent.getPosition().add(world(0, -3, 0)))
     }
     
 
-    //% block="is blok %block=block links van de agent"
+    //% block="is block %block=block left of agent"
     //% block.shadow=minecraftBlock
     export function test_for_block_left_of_agent(block: number): boolean {
         return blocks.testForBlock(block, agent.getPosition().add(pos(0,-1,0).add(getAgentVectors()[RelativeDirection.Left])));
     }
 
 
-    //% block="is blok %block=block rechts van de agent"
+    //% block="is block %block=block right of agent"
     //% block.shadow=minecraftBlock
     export function test_for_block_right_of_agent(block: number): boolean {
         return blocks.testForBlock(block, agent.getPosition().add(pos(0, -1, 0).add(getAgentVectors()[RelativeDirection.Right])));
@@ -154,13 +154,13 @@ namespace CodeCosmos {
 
     
 
-    //% block="is blok %block=block voor van de agent"
+    //% block="is block %block=block front of agent"
     //% block.shadow=minecraftBlock
     export function test_for_block_in_front_of_agent(block: number): boolean {
         return blocks.testForBlock(block, agent.getPosition().add(pos(0, -1, 0).add(getAgentVectors()[RelativeDirection.Forwards])));
     }
 
-    //% block="breek plant"
+    //% block="break plant"
     export function break_plant(): void {
         agent.destroy(FourDirection.Forward)
     }

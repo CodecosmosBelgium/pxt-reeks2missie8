@@ -1,0 +1,24 @@
+{
+    "CodeCosmos.setup_intro|block": "Zet Klaar",
+    "CodeCosmos.next_lever|block": "Volgende schakelaar",
+    "CodeCosmos.set_current_lever|block": "stel schakelaar in op $state",
+
+    "CodeCosmos.is_wood|block": "is hout",
+    "CodeCosmos.is_brick|block": "is baksteen",
+    "CodeCosmos.is_cobblestone|block": "is keisteen",
+    
+    "CodeCosmos.setup_level1|block": "Zet Klaar",
+    "CodeCosmos.setup_level2|block": "Zet Klaar",
+    "CodeCosmos.setup_level3|block": "Zet Klaar",
+    
+    "CodeCosmos.test_for_block_under_agent|block": "is blok $block onder de agent",
+    "CodeCosmos.test_for_block_left_of_agent|block": "is blok $block links van agent",
+    "CodeCosmos.test_for_block_right_of_agent|block": "is blok $block rechts van agent",
+    "CodeCosmos.test_for_block_in_front_of_agent|block": "is blok $block voor de agent",
+    
+    "CodeCosmos.break_plant|block": "breek plant",
+
+
+
+    "{id:category}CodeCosmos": "CodeCosmos"
+  }
