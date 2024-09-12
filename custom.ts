@@ -64,7 +64,7 @@ namespace CodeCosmos {
     //% lever.min=0 lever.max=10 lever.defl=0
     export function set_lever(lever: number, state: boolean): void {
         let leverRoot: Position = world(28, 70, 268);
-        let testblockRoot: Position = world(28, 67, 267);
+        let testblockRoot: Position = world(28, 67, 265);
 
         let currentLever: Position = leverRoot.add(world(lever, 0, 0));
         let currentTestblock: Position = testblockRoot.add(world(lever, 0, 0));
