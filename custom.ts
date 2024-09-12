@@ -49,9 +49,9 @@ namespace CodeCosmos {
     export function next_lever(){
         if (currentLeverId < 11){
             currentLeverId++;
-            
             //player.say(currentLeverId)
         }
+        
     }
 
     //% block="set lever to %state"
@@ -69,6 +69,7 @@ namespace CodeCosmos {
         let currentLever: Position = leverRoot.add(world(lever, 0, 0));
         let currentTestblock: Position = testblockRoot.add(world(lever, 0, 0));
         agent.teleport(currentLever.add(world(0, 0, 1)), NORTH);
+        loops.pause(200)
         // let currentSateString = blocks.testForBlock(IRON_BLOCK, currentTestblock) ? "ON" : "OFF"
         // let desiredStateString = state ? "ON" : "OFF"
         // player.say("CURRENT LEVER STATE IS: " + currentSateString)
