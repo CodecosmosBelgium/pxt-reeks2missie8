@@ -19,7 +19,7 @@ player.onChat("run", function () {
 ```template
 player.onChat("intro", function () {
 CodeCosmos.setup_intro()
-for (let index = 0; index < 11; index++) {
+for (let index = 0; index < 12; index++) {
       
 }
 })
