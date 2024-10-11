@@ -20,13 +20,6 @@ player.onChat("level2", function () {
 ```template
 player.onChat("level2", function () {
     CodeCosmos.setup_level2()
-    while (CodeCosmos.test_for_block_under_agent(FARMLAND)) {
-        agent.move(FORWARD, 1)
-        agent.destroy(FORWARD)
-        if (CodeCosmos.test_for_block_left_of_agent(WATER) && CodeCosmos.test_for_block_in_front_of_agent(WATER)) {
-            agent.turn(RIGHT_TURN)
-        }
-    }
 })
 ```
 
